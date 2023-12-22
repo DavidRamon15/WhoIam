@@ -1,0 +1,16 @@
+<div class="form-container">
+  <h2>Formulario de Personajes</h2>
+  <form (ngSubmit)="emitCharacter()">
+      <div class="form-group mt-4">
+          <label for="nombre" class="fw-bold">Usuario:</label>
+          <input type="text" class="form-control" placeholder="Escribe tu nombre"   [(ngModel)]="player.user" name="user" >
+      </div>
+      <div class="form-group mt-4">
+        <label for="nombre" class="fw-bold">Personaje:</label>
+        <input type="text" class="form-control" placeholder="¿Qué personaje eres?"  [(ngModel)]="player.character" name="character"  #txtPersonaje required>
+    </div>
+      <div class="form-group mt-4">
+          <button type="submit" class="btn btn-success">Enviar</button>
+      </div>
+  </form>
+</div>

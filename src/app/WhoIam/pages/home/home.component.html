@@ -1,0 +1,26 @@
+<div class="boxForm" *ngIf="!isGameStart">
+  <component-character-selection (onNewPlayer)="onNewPlayer( $event )"></component-character-selection>
+
+</div>
+<div class="boxResult" *ngIf="!isGameStart">
+  <component-table-character [playersList]="players" (onDeleteById)="onDeletePlayerById( $event )" (onStartGame)="onStartGame()"></component-table-character>
+</div>
+
+<div class="boxData" *ngIf="isGameStart">
+  <table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Personajes</th>
+        </tr>
+    </thead>
+    <tbody id="character-table-body">
+       <tr *ngFor="let player of players">
+        <td>{{player.character.toUpperCase()}}</td>
+       </tr>
+    </tbody>
+  </table>
+
+  <button class="btn btn-info " (click)="onOtherGamer()">Volver a Jugar</button>
+</div>
+
+

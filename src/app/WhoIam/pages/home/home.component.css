@@ -1,0 +1,23 @@
+.boxForm{
+  display: flex;
+  background-color: #d87607;
+  padding: 30px;
+  border-radius: 20px;
+  margin: 10px;
+}
+.boxResult{
+  display: block;
+  background-color: #fabe25;
+  padding: 30px;
+  border-radius: 20px;
+  margin: 10px;
+}
+.boxData{
+  display: block;
+  background-color: #fde58a;
+  padding: 30px;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+
